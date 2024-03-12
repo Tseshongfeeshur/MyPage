@@ -1,0 +1,24 @@
+- class_name: 友情链接
+  class_desc: 交换友链的同志，请提前准备：网站名称、描述、链接、图标（链接），并确保贵站已有本站友链。
+  flink_style: flexcard
+  link_list:
+    - name: 九六奇谭
+      hundredSuffix: ""
+      link: https://596forever.github.io/
+      avatar: https://596forever.github.io/img/favicon.png
+      descr: 一个非营利性网站，由大同一中高596班构建。
+    - name: 井仪的赛博遗产
+      hundredSuffix: ""
+      link: https://dgoeee.github.io/
+      avatar: https://dgoeee.github.io/img/logo.svg
+      descr: 静态资料网站，这里有经验为主的各类说明
+    - name: Pinpe的物语
+      hundredSuffix: ""
+      link: https://pinpe.top/
+      avatar: https://blog.pinpe.top/wp-content/uploads/2023/08/b_bd4f3172e5e1e7d9a3cb24fd4d3e97d1.jpg
+      descr: 只是一个初中生的个人网站。
+    - name: 一个小站
+      hundredSuffix: ""
+      link: https://ygxz.in/
+      avatar: https://ygxz.in/logo/logo1svg.svg
+      descr: 在互联网上淘金！

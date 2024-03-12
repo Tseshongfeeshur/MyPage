@@ -1,0 +1,185 @@
+/* 设置全局变量 */
+:root {
+    --main-color-1: rgb(132, 35, 197);
+    --main-color-2: rgb(208, 137, 255);
+    --main-color-3: rgb(223, 178, 255);
+    --emphasize-color: rgb(227, 192, 250);
+    --font-color: rgb(52, 0, 82);
+    --shadow-color: rgba(0, 0, 0, 0.185);
+    --background-color: rgb(230, 209, 255);
+    color-scheme: light;
+}
+
+/* 用于深色模式的覆写 */
+.dark-mode {
+    --main-color-1: rgb(51, 0, 99);
+    --main-color-2: rgb(82, 2, 156);
+    --main-color-3: rgb(95, 5, 179);
+    --font-color: rgb(236, 236, 236);
+    --emphasize-color: rgb(46, 2, 116);
+    --shadow-color: rgba(0, 0, 0, 0.377);
+    --background-color: rgb(22, 2, 44);
+    color-scheme: dark;
+}
+
+/* 定义常规标题字体 */
+@font-face {
+    font-family: title-regular;
+    src: url('./fonts/title-regular.woff2') format('woff2');
+}
+
+/* 定义粗体标题字体 */
+@font-face {
+    font-family: title-bold;
+    src: url('./fonts/title-bold.woff2') format('woff2');
+}
+
+/* 定义LOGO字体 */
+@font-face {
+    font-family: logo;
+    src: url('./fonts/logo.woff2') format('woff2');
+}
+
+/* 删除主元素的外间距 */
+body,
+html {
+    margin: 0;
+    padding: 0
+}
+
+/* 背景色 */
+body {
+    background: linear-gradient(310deg, var(--main-color-1), var(--main-color-3));
+}
+
+/* 导航栏容器 */
+div.guider {
+    position: fixed;
+    height: 10vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 导航栏 */
+nav.guide-bar {
+    color: var(--font-color);
+    background-color: var(--emphasize-color);
+    height: 48px;
+    border-radius: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 20px var(--shadow-color);
+    transition: ease-in-out 0.3s;
+    padding: 0 1vw;
+}
+
+/* 导航栏悬停 */
+nav.guide-bar:hover {
+    height: 50px;
+}
+
+/* 导航栏链接 */
+nav.guide-bar a {
+    font-family: title-regular;
+    border-radius: 1000px;
+    font-size: 1.3rem;
+    padding: 2vw;
+    color: var(--font-color);
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    transition: ease-in-out 0.3s;
+}
+
+/* 导航栏链接悬停 */
+nav.guide-bar a:hover {
+    font-size: 1.6rem;
+    padding: 4vw;
+}
+
+/* 标题块 */
+div.title {
+    color: var(--font-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: calc(50vh - 640px / 2) 0 calc(50vh - 640px / 2) 0;
+}
+
+/* 标题块文本 */
+h1.title-h1 {
+    font-family: title-bold;
+    font-weight: 400;
+    font-size: 180px;
+    display: inline;
+}
+
+/* 标题块LOGO */
+span.title-logo {
+    font-family: logo;
+    font-size: 640px;
+    display: inline;
+}
+
+/* 内容块 */
+div.contents {
+    height: 120vh;
+    background-color: var(--background-color);
+    border-radius: 36px;
+    box-shadow: 0 0 20px var(--shadow-color);
+    margin: 0 5vw 2vh 5vw;
+}
+
+/* 屏幕小于1300px时 */
+@media (max-width: 1300px) {
+
+    /* 导航栏链接 */
+    nav.guide-bar a {
+        padding: 3vw;
+    }
+
+    /* 标题块 */
+    div.title {
+        padding: calc(50vh - 49vw / 2) 0 calc(50vh - 49vw / 2) 0;
+    }
+
+    /* 标题块文本 */
+    h1.title-h1 {
+        font-size: 14vw;
+    }
+
+    /* 标题块LOGO */
+    span.title-logo {
+        font-size: 49vw;
+    }
+}
+
+/* 屏幕小于800px时 */
+@media (max-width: 800px) {
+
+    /* 导航栏链接 */
+    nav.guide-bar a {
+        padding: 4vw;
+    }
+
+    /* 标题块 */
+    div.title {
+        padding: calc(50vh - 82vw / 2) 0 calc(50vh - 82vw / 2) 0;
+    }
+
+    /* 标题块文本 */
+    h1.title-h1 {
+        display: none;
+    }
+
+    /* 标题块LOGO */
+    span.title-logo {
+        font-size: 82vw;
+    }
+}
